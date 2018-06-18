@@ -3,7 +3,7 @@
 A talk about Continuous Delivery of JavaScript packages in an enterprise environment.
 
 ## View the presentation
-You can view it directly [here on Github](https://baloise.github.io/talk-cicd-javascript/)
+You can view it directly [here on Github](https://baloise.github.io/talk-cicd-javascript/index#/)
 
 ## Working with a reveal.js presentation
 - The presentation is created with [reveal.js](http://lab.hakim.se/reveal-js/).
@@ -33,4 +33,4 @@ $ npm install
 $ npm start
 ```
 
-Open [Localhost on Port 3000](http://localhost:8000).
+Open [localhost on Port 3000](http://localhost:8000).
