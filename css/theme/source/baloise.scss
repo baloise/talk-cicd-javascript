@@ -190,6 +190,32 @@ figure figcaption {
     }
   }
 
+  .about {
+    display: inline-block;
+    width: 450px;
+
+    img.profile {
+      width: 250px;
+      max-width: none;
+      max-height: none;
+      border-radius: 50%;
+      margin: 0;
+      margin-bottom: 1em;
+    }
+
+    h3 {
+      font-size: 1em;
+    }
+
+    a {
+      font-size: 0.8em;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
   .img-slide {
     h2 {
       display: inline-block;
