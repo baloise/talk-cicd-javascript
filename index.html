@@ -88,7 +88,9 @@
                     <li>alpha / beta prereleases</li>
                     <li>semver as best practice</li>
                     <li>prereleases are tagged and reproducible</li>
-                    <li>only built and published locally and manually</li>
+                    <li>prereleases with npm-dist-tag <span class="code">next</span></li>
+                    <li>releases with npm-dist-tag <span class="code">latest</span></li>
+                    <li>only build and published locally and manually</li>
                 </ul>
             </section>
             <section>
@@ -98,6 +100,7 @@
                     <li>build and release happens on ci</li>
                     <li>prereleases built and published on push</li>
                     <li>semver to communicate changes on release</li>
+                    <li>immutable artifacts</li>
                     <li>developer uses ci job to release major / minor / patch</li>
                 </ul>
             </section>
@@ -134,7 +137,7 @@
         </section>
         <section>
             <section data-background="#E5F3F9">
-                <h2>Release (and Rollout???)</h2>
+                <h2>Release and publish</h2>
                 <img src="img/release.png"/>
             </section>
             <section>
@@ -142,19 +145,23 @@
                 <ul>
                     <li>Release happens on ci</li>
                     <li>build and publish to artifact repository</li>
+                    <li>artifact tagged in git -> immutable</li>
                 </ul>
             </section>
             <section>
                 <h3>Releasing in most JavaScript projects</h3>
                 <ul>
                     <li>done manually and locally by a developer</li>
-                    <li>released on npmjs.org</li>
+                    <li>npm-dist-tag: -> latest</li>
+                    <li>published on npmjs.org</li>
                 </ul>
             </section>
             <section>
                 <h3>Our solution</h3>
                 <ul>
                     <li>git tag on every release by ci</li>
+                    <li>npm-dist-tag: -> latest</li>
+                    <li>ci publishes to artifact repository</li>
                 </ul>
             </section>
         </section>
@@ -183,6 +190,7 @@
                     <li>build jobs defined in project groovy files, under version control</li>
                     <li>maven installed on CI (currently)</li>
                     <li>alternative: usage of gradle wrapper</li>
+                    <li>maven or gradle as dependency manager</li>
                 </ul>
             </section>
             <section>
@@ -190,6 +198,7 @@
                 <ul>
                     <li>define which Node.js version you need</li>
                     <li>container with installed version provided on ci</li>
+                    <li>use package.json to define dependencies</li>
                 </ul>
             </section>
             <section>
@@ -220,6 +229,7 @@
                     <li>that exact NodeJS version will be downloaded via artifact repository and used on CI</li>
                     <li>gradle or maven can be used to define and download</li>
                     <li>npm packages are also downloaded via artifact repository</li>
+                    <li>package.json used to define all dependencies</li>
                 </ul>
             </section>
             <section>
@@ -256,8 +266,39 @@
         <section>
             <section data-background="#E5F3F9">
                 <h3>Standardized process and tools</h3>
-                <h4>Standard api built on best practices - freedom to adjust</h4>
+                <h4>Corporate Standard api built on best practices - freedom to adjust</h4>
                 <img src="img/buildonce.png"/>
+            </section>
+            <section>
+                <h3>Our approach in Java</h3>
+                <ul>
+                    <li>corporate wide maven api and workflow on CI</li>
+                    <li>fully customizable for teams</li>
+                </ul>
+            </section>
+            <section>
+               <pre>
+                    <code class="hljs groovy" data-trim contenteditable>
+                    node {
+                        stage('git checkout') {
+                            checkout scm
+                        }
+                        stage('standard') {
+                            mavenbuild()
+                        }
+                        stage('custom') {
+                            mavenbuild cmd: "clean install",
+                                       mavenArgs: "-DskipTest=true"
+                        }
+                    }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Our solution</h3>
+                <ul>
+                    <li>corporate wide npm</li>
+                </ul>
             </section>
         </section>
         <section>
