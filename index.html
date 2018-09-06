@@ -57,27 +57,69 @@
             <h3>Our workflow for Java artifacts</h3>
             <img src="img/workflow.png"/>
         </section>
+        <section class="deck-slide" data-background="#E5F3F9">
+            <h1>Continuous delivery concepts</h1>
+        </section>
         <section>
-            <section class="deck-slide" data-background="#E5F3F9">
-                <h2>Continuous delivery concepts</h2>
-            </section>
             <section>
-                <h3>Versioning</h3>
+                <h2>Versioning and SNAPSHOTS</h2>
                 <img src="img/semver.png"/>
             </section>
             <section>
-                <h3>Taging</h3>
+                <h3>Our approach in Java</h3>
+                <ul>
+                    <li>not exactly semantic versioning ;-)</li>
+                    <li>SNAPSHOTS!</li>
+                    <li>not tagged</li>
+                    <li>not stable</li>
+                    <li>not reproducible</li>
+                    <li>easy for development</li>
+                    <li>built and published after every push on ci</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Different versioning concepts in JavaScript</h3>
+                <ul>
+                    <li>alpha / beta prereleases</li>
+                    <li>semver as best practice</li>
+                    <li>prereleases are tagged and reproducible</li>
+                    <li>only built and published locally and manually</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Our solution</h3>
+                <h4>some picks from two worlds</h4>
+                <ul>
+                    <li>build and release happens on ci</li>
+                    <li>prereleases built and published on push</li>
+                    <li>semver to communicate changes on release</li>
+                    <li>developer uses jenkins job to release major / minor / patch</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Tagging</h2>
                 <h4>Know the source of your artifact</h4>
                 <img src="img/tag.png"/>
             </section>
-            <section data-background="#E5F3F9">
-                <h3>Snaphsot</h3>
-                <img src="img/snapshot.png"/>
+            <section>
+                <h3>Tagging locally vs. centrally on ci</h3>
+                <ul>
+                    <li>Tagging locally vs. centrally on ci</li>
+                </ul>
             </section>
+        </section>
+        <section>
             <section data-background="#E5F3F9">
-                <h3>Release</h3>
+                <h2>Release</h2>
                 <img src="img/release.png"/>
             </section>
+            <section>
+
+            </section>
+        </section>
+        <section>
             <section data-background="#E5F3F9">
                 <h3>Self contained builds</h3>
                 <h4>Jenkinsfile in GIT, no buildtools installed on Jenkins</h4>
@@ -96,47 +138,6 @@
                     </code>
                 </pre>
             </section>
-            <section data-background="#E5F3F9">
-                <h3>Build once</h3>
-                <img src="img/buildonce.png"/>
-            </section>
-            <section data-background="#E5F3F9">
-                <h3>Standardized process and tools</h3>
-                <h4>Standard api built on best practices - freedom to adjust</h4>
-                <img src="img/buildonce.png"/>
-            </section>
-            <section>
-                <h3>reproducible builds</h3>
-                <h4>without SNAPSHOT dependencies</h4>
-            </section>
-        </section>
-        <section>
-            <section class="deck-slide" data-background="#E5F3F9">
-                <h2>Intro to NodeJS & NPM</h2>
-            </section>
-        </section>
-        <section>
-            <section class="deck-slide" data-background="#E5F3F9">
-                <h2>Challenges in reaching those goals with JavaScript artifacts</h2>
-            </section>
-            <section>
-                <h3>a big corporate enterprise</h3>
-                <h4>security and proxy</h4>
-                <ul>
-                    <li>not able to download any executables</li>
-                    <li>or archives</li>
-                    <li>or NodeJS</li>
-                    <li>or npm packages</li>
-                </ul>
-            </section>
-            <section>
-                <h3>best practices</h3>
-                <h4>in an enterprise environment</h4>
-                <ul>
-                    <li>wonderful open source world</li>
-                    <li>welcome to enterprise reality</li>
-                </ul>
-            </section>
             <section>
                 <h3>No NodeJS installed on CI server</h3>
                 <h4>But We want self contained builds!</h4>
@@ -146,6 +147,37 @@
                     <li class="fragment">gradle or maven can be used to define and download</li>
                 </ul>
             </section>
+            <section>
+                <h3>a big corporate enterprise</h3>
+                <h4>security, corporate proxy and governance</h4>
+                <ul>
+                    <li>not able to download any executables</li>
+                    <li>or archives</li>
+                    <li>or NodeJS</li>
+                    <li>or npm packages</li>
+                    <li>ensure an immutable history of released artifacts</li>
+                </ul>
+            </section>
+        </section>
+        <section data-background="#E5F3F9">
+            <h3>Build once</h3>
+            <img src="img/buildonce.png"/>
+        </section>
+        <section data-background="#E5F3F9">
+            <h3>Standardized process and tools</h3>
+            <h4>Standard api built on best practices - freedom to adjust</h4>
+            <img src="img/buildonce.png"/>
+        </section>
+        <section>
+            <h3>reproducible builds</h3>
+            <h4>without SNAPSHOT dependencies</h4>
+        </section>
+        <section>
+            <section class="deck-slide" data-background="#E5F3F9">
+                <h2>Intro to NodeJS & NPM</h2>
+            </section>
+        </section>
+        <section>
             <section>
                 <h3>Example using Frontend-Maven Plugin</h3>
                 <pre>
