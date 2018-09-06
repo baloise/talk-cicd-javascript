@@ -21,7 +21,7 @@
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
 </head>
-<body>a
+<body>
 <div class="reveal">
     <div class="slides">
         <section class="deck-slide" data-background="#E5F3F9">
@@ -35,13 +35,13 @@
                     <img class="profile" width="250" height="250" alt="Marius" src="img/joachim-schlienger.jpeg">
                     <h3>Joachim Schlienger</h3>
                     <h3><a href="">Software Engineer @ Baloise</a></h3>
-                    <img height="90px" src="img/baloise.png">
+                    <h3><img width="40" style="float: left;" src="./img/Twitter_Logo_Blue.png"><a href="">@joachimschlienger</a></h3>
                 </div>
                 <div class="about">
                     <img class="profile" width="250" height="250" alt="Joachim" src="img/joachim-prinzbach.jpeg">
                     <h3>Joachim Prinzbach</h3>
                     <h3><a href="">Software Engineer @ Baloise</a></h3>
-                    <img height="90px" src="img/baloise.png">
+                    <h3><img width="40" style="float: left;" src="./img/Twitter_Logo_Blue.png"><a href="">@johaaachim</a></h3>
                 </div>
             </div>
         </section>
@@ -56,6 +56,11 @@
         <section data-background="#FFFFFF">
             <h3>Our workflow for Java artifacts</h3>
             <img src="img/workflow.png"/>
+        </section>
+        <section>
+            <section class="deck-slide" data-background="#E5F3F9">
+                <h2>Intro to NodeJS & NPM</h2>
+            </section>
         </section>
         <section class="deck-slide" data-background="#E5F3F9">
             <h1>Continuous delivery concepts</h1>
@@ -93,8 +98,13 @@
                     <li>build and release happens on ci</li>
                     <li>prereleases built and published on push</li>
                     <li>semver to communicate changes on release</li>
-                    <li>developer uses jenkins job to release major / minor / patch</li>
+                    <li>developer uses ci job to release major / minor / patch</li>
                 </ul>
+            </section>
+            <section>
+                <h4>CI live demo - Fallback</h4>
+                <img src="img/prerelease_javascript.png"/>
+                <img src="img/release_javascript.png"/>
             </section>
         </section>
         <section>
@@ -104,25 +114,54 @@
                 <img src="img/tag.png"/>
             </section>
             <section>
-                <h3>Tagging locally vs. centrally on ci</h3>
+                <h3>Our approach in Java</h3>
                 <ul>
-                    <li>Tagging locally vs. centrally on ci</li>
+                    <li>git tag on every release by ci</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Tagging in most JavaScript projects</h3>
+                <ul>
+                    <li>done manually and locally by a developer</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Our solution</h3>
+                <ul>
+                    <li>git tag on every release by ci</li>
                 </ul>
             </section>
         </section>
         <section>
             <section data-background="#E5F3F9">
-                <h2>Release</h2>
+                <h2>Release (and Rollout???)</h2>
                 <img src="img/release.png"/>
             </section>
             <section>
-
+                <h3>Our approach in Java</h3>
+                <ul>
+                    <li>Release happens on ci</li>
+                    <li>build and publish to artifact repository</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Releasing in most JavaScript projects</h3>
+                <ul>
+                    <li>done manually and locally by a developer</li>
+                    <li>released on npmjs.org</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Our solution</h3>
+                <ul>
+                    <li>git tag on every release by ci</li>
+                </ul>
             </section>
         </section>
         <section>
             <section data-background="#E5F3F9">
                 <h3>Self contained builds</h3>
-                <h4>Jenkinsfile in GIT, no buildtools installed on Jenkins</h4>
+                <h4>CI job configuration in GIT, no buildtools installed on ci</h4>
                 <pre>
                     <code class="hljs groovy" data-trim contenteditable>
                     pipeline {
@@ -139,12 +178,18 @@
                 </pre>
             </section>
             <section>
-                <h3>No NodeJS installed on CI server</h3>
-                <h4>But We want self contained builds!</h4>
+                <h3>Our approach in Java</h3>
                 <ul>
-                    <li class="fragment">a project defines its required NodeJS version</li>
-                    <li class="fragment">that NodeJS version will be downloaded locally and on CI</li>
-                    <li class="fragment">gradle or maven can be used to define and download</li>
+                    <li>build jobs defined in project groovy files, under version control</li>
+                    <li>maven installed on CI (currently)</li>
+                    <li>alternative: usage of gradle wrapper</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Most javascript projects</h3>
+                <ul>
+                    <li>define which Node.js version you need</li>
+                    <li>container with installed version provided on ci</li>
                 </ul>
             </section>
             <section>
@@ -158,26 +203,25 @@
                     <li>ensure an immutable history of released artifacts</li>
                 </ul>
             </section>
-        </section>
-        <section data-background="#E5F3F9">
-            <h3>Build once</h3>
-            <img src="img/buildonce.png"/>
-        </section>
-        <section data-background="#E5F3F9">
-            <h3>Standardized process and tools</h3>
-            <h4>Standard api built on best practices - freedom to adjust</h4>
-            <img src="img/buildonce.png"/>
-        </section>
-        <section>
-            <h3>reproducible builds</h3>
-            <h4>without SNAPSHOT dependencies</h4>
-        </section>
-        <section>
-            <section class="deck-slide" data-background="#E5F3F9">
-                <h2>Intro to NodeJS & NPM</h2>
+            <section>
+                <h3>Artifact repository to the rescue!</h3>
+                <ul>
+                    <li>can download binaries and executables</li>
+                    <li>works perfectly as download manager ;-)</li>
+                    <li>has our own published packages</li>
+                    <li>works as proxy to the outside world -> npmjs.org</li>
+                </ul>
             </section>
-        </section>
-        <section>
+            <section>
+                <h3>Our solution</h3>
+                <h4>No NodeJS installed on CI server</h4>
+                <ul>
+                    <li>a project defines its required NodeJS version</li>
+                    <li>that exact NodeJS version will be downloaded via artifact repository and used on CI</li>
+                    <li>gradle or maven can be used to define and download</li>
+                    <li>npm packages are also downloaded via artifact repository</li>
+                </ul>
+            </section>
             <section>
                 <h3>Example using Frontend-Maven Plugin</h3>
                 <pre>
@@ -202,49 +246,36 @@
                     </code>
                 </pre>
             </section>
-            <section>
-                <h3>Publish workflow similar to Java</h3>
-                <h4>clean, build, test, publish to repository</h4>
-            </section>
-            <section>
-                <h3>Java Delevopers -> </h3>
-            </section>
-            <section>
-                <h3></h3>
+        </section>
+        <section>
+            <section data-background="#E5F3F9">
+                <h3>Build once</h3>
+                <img src="img/buildonce.png"/>
             </section>
         </section>
         <section>
             <section data-background="#E5F3F9">
-                <h2>Our tools in Java</h2>
+                <h3>Standardized process and tools</h3>
+                <h4>Standard api built on best practices - freedom to adjust</h4>
+                <img src="img/buildonce.png"/>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>reproducible builds</h3>
+                <h4>without SNAPSHOT dependencies</h4>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>the future</h3>
                 <ul>
-                    <li>First</li>
-                    <li>Second</li>
+                    <li>security and license checks for npm packages -> IQ Server</li>
+                    <li>no maven installed on ci -> fetch temporary via artifact repository</li>
+                    <li>no need for maven or gradle to define and download nodejs version</li>
+                    <li>-> nodejs docker img?</li>
                 </ul>
             </section>
-            <section>
-                <h2>Navigating vertically</h2>
-            </section>
-        </section>
-        <section>
-            <h2>Groovy code example</h2>
-            <pre>
-                <code class="hljs groovy" data-trim contenteditable>
-                pipeline {
-                    agent { docker 'maven:3-alpine' }
-                    stages {
-                        stage('Example Build') {
-                            steps {
-                                sh 'mvn -B clean verify'
-                            }
-                        }
-                    }
-                }
-                </code>
-            </pre>
-        </section>
-        <section>
-            <h3>image</h3>
-            <img src="img/semantic-versioning.png"/>
         </section>
     </div>
 </div>
