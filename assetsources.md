@@ -9,6 +9,6 @@
 - semver: http://digitalcommunications.wp.st-andrews.ac.uk/files/2017/01/semver03.png
 - tag: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/VisualEditor_-_Icon_-_Tag-big.svg/1024px-VisualEditor_-_Icon_-_Tag-big.svg.png
 - snapshot: https://adventusasia.com/resources/front/template/adventusasia/images/managed-backup/snapshot.png
-- release: https://www.imailserver.com/hubfs/new-release-blog-compressed.png?t=1533329630458
 - buildonce: https://i.pinimg.com/originals/68/55/51/6855511eb97adea2cb1bbc4272b75b49.png
+- release https://www.google.ch/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwihiYbuhLjdAhWNZlAKHWp3BVIQjRx6BAgBEAU&url=https%3A%2F%2Fnewswatchtv.com%2F2017%2F12%2F18%2Fpostal-deliverers-holiday-package-delivery-science%2F&psig=AOvVaw347T6ItL9LAVL4eC-XLOIw&ust=1536930074405490
 

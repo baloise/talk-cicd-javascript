@@ -49,19 +49,32 @@
             <h2>About Baloise</h2>
             <h3>...</h3>
         </section>
-        <section data-background="#FFFFFF">
-            <h3>Our tools in Java</h3>
-            <img src="img/tools.png"/>
-        </section>
-        <section data-background="#FFFFFF">
-            <h3>Our workflow for Java artifacts</h3>
-            <img src="img/workflow.png"/>
-        </section>
+
         <section>
             <section class="deck-slide" data-background="#E5F3F9">
                 <h2>Intro to NodeJS & NPM</h2>
             </section>
         </section>
+
+        <section>
+            <section class="deck-slide" data-background="#E5F3F9">
+                <h1>Our continuous delivery workflows in Java</h1>
+            </section>
+            <section data-background="#FFFFFF">
+                <h3>Our tools in Java</h3>
+                <img src="img/tools.png"/>
+            </section>
+            <section data-background="#FFFFFF">
+                <h3>Our workflow for Java artifacts</h3>
+                <img src="img/workflow.png"/>
+            </section>
+            <section data-background="#FFFFFF">
+                <h3>Our workflow for Java artifacts snapshot</h3>
+                <img src="img/workflow.png"/>
+            </section>
+        </section>
+
+
         <section class="deck-slide" data-background="#E5F3F9">
             <h1>Continuous delivery concepts</h1>
         </section>
@@ -73,35 +86,35 @@
             <section>
                 <h3>Our approach in Java</h3>
                 <ul>
-                    <li>not exactly semantic versioning ;-)</li>
-                    <li>SNAPSHOTS!</li>
-                    <li>not tagged</li>
-                    <li>not stable</li>
-                    <li>not reproducible</li>
-                    <li>easy for development</li>
-                    <li>built and published after every push on ci</li>
+                    <li class="fragment">not exactly semantic versioning ;-)</li>
+                    <li class="fragment">SNAPSHOTS!</li>
+                    <li class="fragment">not tagged</li>
+                    <li class="fragment">not stable</li>
+                    <li class="fragment">not reproducible</li>
+                    <li class="fragment">easy for development</li>
+                    <li class="fragment">built and published after every push on ci</li>
                 </ul>
             </section>
             <section>
                 <h3>Different versioning concepts in JavaScript</h3>
                 <ul>
-                    <li>alpha / beta prereleases</li>
-                    <li>semver as best practice</li>
-                    <li>prereleases are tagged and reproducible</li>
-                    <li>prereleases with npm-dist-tag <span class="code">next</span></li>
-                    <li>releases with npm-dist-tag <span class="code">latest</span></li>
-                    <li>only build and published locally and manually</li>
+                    <li class="fragment">alpha / beta prereleases</li>
+                    <li class="fragment">semver as best practice</li>
+                    <li class="fragment">prereleases are tagged and reproducible</li>
+                    <li class="fragment">prereleases with npm-dist-tag <span class="code">next</span></li>
+                    <li class="fragment">releases with npm-dist-tag <span class="code">latest</span></li>
+                    <li class="fragment">only build and published locally and manually</li>
                 </ul>
             </section>
             <section>
                 <h3>Our solution</h3>
                 <h4>some picks from two worlds</h4>
                 <ul>
-                    <li>build and release happens on ci</li>
-                    <li>prereleases built and published on push</li>
-                    <li>semver to communicate changes on release</li>
-                    <li>immutable artifacts</li>
-                    <li>developer uses ci job to release major / minor / patch</li>
+                    <li class="fragment">build and release happens on ci</li>
+                    <li class="fragment">prereleases built and published on push</li>
+                    <li class="fragment">semver to communicate changes on release</li>
+                    <li class="fragment">immutable artifacts</li>
+                    <li class="fragment">developer uses ci job to release major / minor / patch</li>
                 </ul>
             </section>
             <section>
@@ -110,115 +123,100 @@
                 <img src="img/release_javascript.png"/>
             </section>
         </section>
-        <section>
-            <section>
-                <h2>Tagging</h2>
-                <h4>Know the source of your artifact</h4>
-                <img src="img/tag.png"/>
-            </section>
-            <section>
-                <h3>Our approach in Java</h3>
-                <ul>
-                    <li>git tag on every release by ci</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Tagging in most JavaScript projects</h3>
-                <ul>
-                    <li>done manually and locally by a developer</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Our solution</h3>
-                <ul>
-                    <li>git tag on every release by ci</li>
-                </ul>
-            </section>
-        </section>
+
         <section>
             <section data-background="#E5F3F9">
-                <h2>Release and publish</h2>
-                <img src="img/release.png"/>
+                <h2>Releasing, tagging and publishing</h2>
+                <img style="width: 80%" src="img/packageDelivery.jpg"/>
             </section>
             <section>
                 <h3>Our approach in Java</h3>
                 <ul>
-                    <li>Release happens on ci</li>
-                    <li>build and publish to artifact repository</li>
-                    <li>artifact tagged in git -> immutable</li>
+                    <li class="fragment">Release happens on ci</li>
+                    <li class="fragment">build and publish to artifact repository</li>
+                    <li class="fragment">artifact tagged in git -> immutable</li>
                 </ul>
             </section>
             <section>
                 <h3>Releasing in most JavaScript projects</h3>
                 <ul>
-                    <li>done manually and locally by a developer</li>
-                    <li>npm-dist-tag: -> latest</li>
-                    <li>published on npmjs.org</li>
+                    <li class="fragment">releasing and tagging manually and locally by a developer</li>
+                    <li class="fragment">npm-dist-tag: -> latest</li>
+                    <li class="fragment">published on npmjs.org</li>
                 </ul>
             </section>
             <section>
                 <h3>Our solution</h3>
                 <ul>
-                    <li>git tag on every release by ci</li>
-                    <li>npm-dist-tag: -> latest</li>
-                    <li>ci publishes to artifact repository</li>
+                    <li class="fragment">git tag on every release by ci</li>
+                    <li class="fragment">npm-dist-tag: -> latest</li>
+                    <li class="fragment">ci publishes to artifact repository</li>
                 </ul>
             </section>
         </section>
         <section>
             <section data-background="#E5F3F9">
                 <h3>Self contained builds</h3>
-                <h4>CI job configuration in GIT, no buildtools installed on ci</h4>
+                <h5>CI job configuration in GIT, no buildtools installed on ci</h5>
                 <pre>
                     <code class="hljs groovy" data-trim contenteditable>
-                    pipeline {
-                        agent { docker 'maven:3-alpine' }
-                        stages {
-                            stage('Example Build') {
-                                steps {
-                                    sh 'mvn -B clean verify'
-                                }
+                        options {
+                            disableConcurrentBuilds()
+                        }
+                        parameters {
+                            choice(
+                                choices: 'Major\nMinor\nPatch',
+                                description: 'Which version?',
+                                name: 'version'
+                            )
+                        }
+                        stage('Example Build') {
+                            node() {
+                                checkout scm
+                                npmInit()
+                                npmRelease version: "${params.version}"
                             }
                         }
-                    }
+
+
                     </code>
                 </pre>
             </section>
             <section>
                 <h3>Our approach in Java</h3>
                 <ul>
-                    <li>build jobs defined in project groovy files, under version control</li>
-                    <li>maven installed on CI (currently)</li>
-                    <li>alternative: usage of gradle wrapper</li>
-                    <li>maven or gradle as dependency manager</li>
+                    <li class="fragment">build jobs defined in project groovy files, under version control</li>
+                    <li class="fragment">maven installed on CI (currently)</li>
+                    <li class="fragment">alternative: usage of gradle wrapper</li>
+                    <li class="fragment">maven or gradle as dependency manager</li>
                 </ul>
             </section>
             <section>
                 <h3>Most javascript projects</h3>
                 <ul>
-                    <li>define which Node.js version you need</li>
-                    <li>container with installed version provided on ci</li>
-                    <li>use package.json to define dependencies</li>
+                    <li class="fragment">define which Node.js version you need</li>
+                    <li class="fragment">container with installed version provided on ci</li>
+                    <li class="fragment">use package.json to define dependencies</li>
                 </ul>
             </section>
             <section>
                 <h3>a big corporate enterprise</h3>
                 <h4>security, corporate proxy and governance</h4>
                 <ul>
-                    <li>not able to download any executables</li>
-                    <li>or archives</li>
-                    <li>or NodeJS</li>
-                    <li>or npm packages</li>
-                    <li>ensure an immutable history of released artifacts</li>
+                    <li class="fragment">not able to download any executables</li>
+                    <li class="fragment">or NodeJS</li>
+                    <li class="fragment">or archives</li>
+                    <li class="fragment">or npm packages</li>
+                    <li class="fragment">must ensure an immutable history of released artifacts</li>
                 </ul>
             </section>
             <section>
                 <h3>Artifact repository to the rescue!</h3>
                 <ul>
-                    <li>can download binaries and executables</li>
-                    <li>works perfectly as download manager ;-)</li>
-                    <li>has our own published packages</li>
-                    <li>works as proxy to the outside world -> npmjs.org</li>
+                    <li class="fragment">can download binaries and executables</li>
+                    <li class="fragment">works perfectly as download manager ;-)</li>
+                    <li class="fragment">has our own published packages</li>
+                    <li class="fragment">works as proxy to the outside world -> npmjs.org</li>
                 </ul>
             </section>
             <section>
@@ -226,9 +224,10 @@
                 <h4>No NodeJS installed on CI server</h4>
                 <ul>
                     <li>a project defines its required NodeJS version</li>
-                    <li>that exact NodeJS version will be downloaded via artifact repository and used on CI</li>
+                    <li>that exact NodeJS version will be downloaded with maven</li>
+                    <li>donwload publish/release library with npm</li>
                     <li>gradle or maven can be used to define and download</li>
-                    <li>npm packages are also downloaded via artifact repository</li>
+                    <li>npm packages are also downloaded through artifact repository</li>
                     <li>package.json used to define all dependencies</li>
                 </ul>
             </section>
@@ -260,7 +259,7 @@
         <section>
             <section data-background="#E5F3F9">
                 <h3>Build once</h3>
-                <img src="img/buildonce.png"/>
+                <img src="img/buildOnce_with_Products.png"/>
             </section>
         </section>
         <section>
@@ -296,15 +295,43 @@
             </section>
             <section>
                 <h3>Our solution</h3>
+                <pre>
+                    <code class="hljs groovy" data-trim contenteditable>
+                    node {
+                        stage('git checkout') {
+                            checkout scm
+                        }
+                        stage('standard') {
+                            npmInit()
+                            npmBuild()
+                            npmRelease()
+                        }
+                        stage('custom') {
+                            npmInit()
+                            npmRun scriptName: "test-ci"
+                            npmRun scriptName: "build-prod"
+                            npmRelease version: "${params.version}"
+                        }
+                    }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Our solution (2)</h3>
                 <ul>
-                    <li>corporate wide npm</li>
+                    <li>some text here</li>
                 </ul>
             </section>
+            <section>
+                <h3>Documented in jenkins</h3>
+                <img src="img/Pipeline Syntax_ Global Variable Reference.png"/>
+            </section>
         </section>
+
         <section>
             <section>
-                <h3>reproducible builds</h3>
-                <h4>without SNAPSHOT dependencies</h4>
+                <h3>Statistics</h3>
+                <h4>About 3000 Jobs</h4>
             </section>
         </section>
         <section>
