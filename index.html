@@ -148,6 +148,15 @@
                     <li class="fragment">git tag on every release by ci</li>
                     <li class="fragment">npm-dist-tag: -> latest</li>
                     <li class="fragment">ci publishes to artifact repository</li>
+
+                        <pre class="fragment">
+                    <code class="hljs bash" data-trim contenteditable>
+                        $ npm info @cicd/demo
+
+
+                    </code>
+                </pre>
+
                 </ul>
             </section>
         </section>
@@ -193,7 +202,7 @@
                 <ul>
                     <li class="fragment">define which Node.js version you need</li>
                     <li class="fragment">container with installed version provided on ci</li>
-                    <li class="fragment">use package.json to define dependencies</li>
+                    <li class="fragment">use <span class="code">package.json</span> to define dependencies</li>
                 </ul>
             </section>
             <section>
@@ -204,7 +213,7 @@
                     <li class="fragment">or NodeJS</li>
                     <li class="fragment">or archives</li>
                     <li class="fragment">or npm packages</li>
-                    <li class="fragment">must ensure an immutable history of released artifacts</li>
+                    <li class="fragment">also: must ensure an immutable history of released artifacts</li>
                 </ul>
             </section>
             <section>
@@ -213,7 +222,7 @@
                     <li class="fragment">can download binaries and executables</li>
                     <li class="fragment">works perfectly as download manager ;-)</li>
                     <li class="fragment">has our own published packages</li>
-                    <li class="fragment">works as proxy to the outside world -> npmjs.org</li>
+                    <li class="fragment">works as proxy to the outside world -> <a href="npmjs.org">npmjs.org</a></li>
                 </ul>
             </section>
             <section>
@@ -222,10 +231,10 @@
                 <ul>
                     <li>a project defines its required NodeJS version</li>
                     <li>that exact NodeJS version will be downloaded with maven</li>
-                    <li>donwload publish/release library with npm</li>
                     <li>gradle or maven can be used to define and download</li>
+                    <li><span class="code">package.json</span> used to define all dependencies</li>
                     <li>npm packages are also downloaded through artifact repository</li>
-                    <li>package.json used to define all dependencies</li>
+                    <li>download our JavaScript <span class="code">publish library </span>with npm</li>
                 </ul>
             </section>
             <section>
@@ -258,7 +267,7 @@
             <section data-background="#E5F3F9">
                 <h3>Standardized process and tools</h3>
                 <h4>Corporate Standard api built on best practices - freedom to adjust</h4>
-                <img style="width: 70%" src="img/Snapshotbuild.png"/>
+                <h2 style="color:red;">INSERT A TEASER PIC HERE</h2>
             </section>
             <section>
                 <h3>Our approach in Java</h3>
@@ -266,8 +275,6 @@
                     <li>corporate wide maven api and workflow on CI</li>
                     <li>fully customizable for teams</li>
                 </ul>
-            </section>
-            <section>
                <pre>
                     <code class="hljs groovy" data-trim contenteditable>
                     node {
@@ -278,8 +285,9 @@
                             mavenbuild()
                         }
                         stage('custom') {
-                            mavenbuild cmd: "clean install",
-                                       mavenArgs: "-DskipTest=true"
+                            mavenbuild
+                                cmd: "clean install",
+                                mavenArgs: "-DskipTest=true"
                         }
                     }
                     </code>
@@ -300,19 +308,14 @@
                         }
                         stage('custom') {
                             npmInit()
+                            npmRun scriptName: "lint-ci"
                             npmRun scriptName: "test-ci"
                             npmRun scriptName: "build-prod"
-                            npmRelease version: "${params.version}"
+                            npmRelease version: "major"
                         }
                     }
                     </code>
                 </pre>
-            </section>
-            <section>
-                <h3>Our solution (2)</h3>
-                <ul>
-                    <li>some text here</li>
-                </ul>
             </section>
             <section>
                 <h3>Documented in jenkins</h3>
@@ -321,9 +324,30 @@
         </section>
 
         <section>
+            <section data-background="#E5F3F9">
+                <h2>Challanges</h2>
+                <img src="img/challange.jpg"/>
+            </section>
+            <section data-background="#E5F3F9">
+                <h2>Challanges</h2>
+                <img src="img/kaufsoftware.jpg"/>
+            </section>
+            <section data-background="#E5F3F9">
+                <h2>Challanges</h2>
+                <img src="img/garten.jpg"/>
+            </section>
+            <section data-background="#E5F3F9">
+                <h2>Challanges</h2>
+                <img src="img/mindchange.jpg"/>
+            </section>
+        </section>
+
+        <section>
             <section>
                 <h3>Statistics</h3>
-                <h4>About 3000 Jobs</h4>
+                <h4>230 IT guys</h4>
+                <h4>25 scrum teams</h4>
+                <h4>3000 Jobs</h4>
             </section>
         </section>
         <section>
