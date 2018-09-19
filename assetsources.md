@@ -11,4 +11,5 @@
 - snapshot: https://adventusasia.com/resources/front/template/adventusasia/images/managed-backup/snapshot.png
 - buildonce: https://i.pinimg.com/originals/68/55/51/6855511eb97adea2cb1bbc4272b75b49.png
 - release https://www.google.ch/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwihiYbuhLjdAhWNZlAKHWp3BVIQjRx6BAgBEAU&url=https%3A%2F%2Fnewswatchtv.com%2F2017%2F12%2F18%2Fpostal-deliverers-holiday-package-delivery-science%2F&psig=AOvVaw347T6ItL9LAVL4eC-XLOIw&ust=1536930074405490
+- forbidden https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Forbidden_Symbol_Transparent.svg/480px-Forbidden_Symbol_Transparent.svg.png
 
