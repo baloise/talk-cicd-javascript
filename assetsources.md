@@ -16,4 +16,6 @@
 - buy software https://image.shutterstock.com/image-photo/saransk-russia-march-27-2017-260nw-616734416.jpg
 - mind change http://www.wearechainsaw.com/wp-content/uploads/2017/05/shutterstock_175227479-2.jpg
 - challange https://i.pinimg.com/originals/51/c2/68/51c26805f974abda8d02deaf33b152e5.jpg
-
+- automate https://blog.siliconloons.com/automate-all-the-things.png
+- firewall https://www.caiservice.com/images/stories/services/wall.png
+- npm and node.js https://coolestguidesontheplanet.com/wp-content/uploads/2014/07/nodejs-npm.png

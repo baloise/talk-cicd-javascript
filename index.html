@@ -63,11 +63,11 @@
             </section>
 
             <section data-background="#FFFFFF">
-                <h3>Our workflow for Java artifacts snapshot</h3>
+                <h3>Snapshot workflow for Java artifacts</h3>
                 <img style="width: 90%" src="img/Snapshotbuild.png"/>
             </section>
             <section data-background="#FFFFFF">
-                <h3>Our workflow for Java artifacts</h3>
+                <h3>Release workflow for Java artifacts</h3>
                 <img style="width: 90%" src="img/Releasebuild.png"/>
             </section>
         </section>
@@ -322,6 +322,21 @@
         </section>
 
         <section>
+            <section class="deck-slide" data-background="#E5F3F9">
+                <h2>Our continuous delivery workflows for JavaScript artifacts</h2>
+            </section>
+
+            <section data-background="#FFFFFF">
+                <h3>Prerelease workflow for JavaScript artifacts</h3>
+                <img style="width: 90%" src="img/npm_workflow.png"/>
+            </section>
+            <section data-background="#FFFFFF">
+                <h3>Release workflow for JavaScript artifacts</h3>
+                <img style="width: 90%" src="img/npm_workflow-release.png"/>
+            </section>
+        </section>
+
+        <section>
             <section data-background="#E5F3F9">
                 <h2>Challenges</h2>
                 <img style="width: 90%" src="img/challange.jpg"/>
@@ -337,6 +352,23 @@
             <section data-background="#E5F3F9">
                 <h3>DevOps mindchange</h3>
                 <img style="width: 60%" src="img/mindchange.jpg"/>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Learnings</h2>
+                <img style="width: 90%" src="img/challange.jpg"/>
+            </section>
+            <section>
+                <h3></h3>
+                <ul>
+                    <li>collect data from ci in a persistence store to feed a viewer</li>
+                    <li>artifacts are only retrieved from artifact repository (build once)</li>
+                    <li>learn from npm where snapshots are distinguishable -> branchname in version</li>
+                    <li>hide the differences between Java and JavaScript behind a facade</li>
+                    <li>stick to the common best practices of each ecosystem</li>
+                    <li>and... </li>
+                </ul>
             </section>
         </section>
 
@@ -356,6 +388,9 @@
                     <li>no maven installed on ci -> fetch temporary via artifact repository</li>
                     <li>no need for maven or gradle to define and download nodejs version</li>
                     <li>-> nodejs docker img?</li>
+                    <li>automatic changelog creation and versiomn retrieval based on commit template</li>
+                    <li>prevent releasing of apps with beta packages as dependency</li>
+                    <li>open source publish library</li>
                 </ul>
             </section>
         </section>
