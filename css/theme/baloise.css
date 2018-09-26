@@ -33,6 +33,12 @@ figure figcaption {
   .reveal h2 code {
     font-weight: normal;
     background: transparent; }
+  .reveal h2 span.image-heading {
+    background: black;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    font-size: 1.5em;
+    color: #ffffff !important; }
 
 .reveal section img {
   background: none !important; }
