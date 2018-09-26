@@ -1,7 +1,7 @@
 {
-  "name": "ws-css-basics",
+  "name": "talk-cicd-javascript",
   "version": "0.1.0",
-  "description": "Workshop about CSS Basics and a couple of more advanced features",
+  "description": "A talk about Continuous Delivery of JavaScript packages in an enterprise environment.",
   "scripts": {
     "start": "grunt serve"
   },
