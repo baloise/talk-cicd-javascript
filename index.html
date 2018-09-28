@@ -135,7 +135,7 @@
         <section data-background="#44A0DD">
             <section data-background="img/semver.png" data-background-size="100%">
             </section>
-            <section>
+            <section data-background="#E5F3F9">
                 <h3>Our approach in Java</h3>
                 <ul>
                     <li class="fragment">not exactly semantic versioning ;-)</li>
@@ -147,7 +147,7 @@
                     <li class="fragment">built and published after every push on ci</li>
                 </ul>
             </section>
-            <section>
+            <section data-background="#E5F3F9">
                 <h3>Different versioning concepts in JavaScript</h3>
                 <ul>
                     <li class="fragment">alpha / beta prereleases</li>
@@ -158,7 +158,7 @@
                     <li class="fragment">only build and published locally and manually</li>
                 </ul>
             </section>
-            <section>
+            <section data-background="#E5F3F9">
                 <h3>Our solution</h3>
                 <h4>some picks from two worlds</h4>
                 <ul>
@@ -169,7 +169,7 @@
                     <li class="fragment">developer uses ci job to release major / minor / patch</li>
                 </ul>
             </section>
-            <section>
+            <section data-background="#E5F3F9">
                 <h3>CI live demo - Fallback</h3>
                 <img style="width: 90%" src="img/prerelease_javascript.png"/>
                 <img style="width: 90%" src="img/release_javascript.png"/>
@@ -284,12 +284,12 @@
                 <h3>Our solution</h3>
                 <h4>No NodeJS installed on CI server</h4>
                 <ul>
-                    <li>a project defines its required NodeJS version</li>
-                    <li>that exact NodeJS version will be downloaded with maven</li>
-                    <li>gradle or maven can be used to define and download</li>
-                    <li><span class="code">package.json</span> used to define all dependencies</li>
-                    <li>npm packages are also downloaded through artifact repository</li>
-                    <li>download our JavaScript <span class="code">publish library </span>with npm</li>
+                    <li class="fragment">a project defines its required NodeJS version</li>
+                    <li class="fragment">that exact NodeJS version will be downloaded with maven</li>
+                    <li class="fragment">gradle or maven can be used to define and download</li>
+                    <li class="fragment"><span class="code">package.json</span> used to define all dependencies</li>
+                    <li class="fragment">npm packages are also downloaded through artifact repository</li>
+                    <li class="fragment">download our JavaScript <span class="code">publish library </span>with npm</li>
                 </ul>
             </section>
             <section>
@@ -403,7 +403,7 @@
                 <h2><span class="image-heading">Third party software</span></h2>
             </section>
             <section data-background="img/thor-alvis-747416-unsplash.jpg">
-                <h2><span class="image-heading">Developers gardens</span></h2>
+                <h2><span class="image-heading">Dev & Ops gardens</span></h2>
             </section>
             <section data-background="img/mindchange.jpg">
                 <h2><span class="image-heading">DevOps mindchange</span></h2>
@@ -445,13 +445,20 @@
                 <h2><span class="image-heading">The future</span></h2>
             </section>
             <section>
-                <h2>the future</h2>
+                <h2>the future (1)</h2>
                 <ul>
                     <li>security and license checks for npm packages -> IQ Server</li>
                     <li>no maven installed on ci -> fetch temporary via artifact repository</li>
                     <li>no need for maven or gradle to define and download nodejs version</li>
                     <li>-> nodejs docker img?</li>
-                    <li>automatic changelog creation and versiomn retrieval based on commit template</li>
+
+                </ul>
+            </section>
+            <section>
+                <h2>the future (2)</h2>
+                <ul>
+
+                    <li>automatic changelog creation and version retrieval based on commit template</li>
                     <li>prevent releasing of apps with beta packages as dependency</li>
                     <li>open source publish library</li>
                 </ul>
