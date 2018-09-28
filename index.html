@@ -111,14 +111,23 @@
             <section data-background="#E5F3F9">
                 <h3>Baloise approach in Java</h3>
                 <ul>
-                    <li>not exactly semantic versioning ;-)</li>
-                    <li>SNAPSHOTS!</li>
-                    <li>not tagged</li>
-                    <li>not stable</li>
-                    <li>not reproducible</li>
-                    <li>easy for development</li>
-                    <li>built and published after every push on ci</li>
+                    <li>semver as best practice</li>
+                    <li>SNAPSHOTS built and published after every push on ci</li>
                 </ul>
+
+
+                    <pre>
+                        <code class="hljs xml" data-trim contenteditable>
+                           &lt;dependency>
+                                &lt;groupId>junit&lt;/groupId>
+                                &lt;artifactId>junit&lt;/artifactId>
+                                &lt;version>4.12&lt;/version>
+                                &lt;scope>test&lt;/scope>
+                            &lt;/dependency>
+                        </code>
+                    </pre>
+
+
             </section>
             <section data-background="#E5F3F9">
                 <h3>Different versioning concepts in JavaScript</h3>
