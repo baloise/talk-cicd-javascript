@@ -30,23 +30,6 @@
             <h2 class="subheader"> - in an enterprise environment - </h2>
             <h5 style="text-align: end;">Joachim^2, Basel One - 16.10.2018</h5>
         </section>
-        <section class="about-slide">
-            <h2>About us</h2>
-            <div>
-                <div class="about">
-                    <img class="profile" width="250" height="250" alt="Joachim" src="img/joachim-schlienger.jpeg">
-                    <h3>Joachim Schlienger</h3>
-                    <h3><a href="">Software Engineer @ Baloise</a></h3>
-                    <h3><img width="40" style="vertical-align: middle;;" src="./img/Twitter_Logo_Blue.png"><a href="https://twitter.com/JoachimSchlien1">@JoachimSchlien1</a></h3>
-                </div>
-                <div class="about">
-                    <img class="profile" width="250" height="250" alt="Joachim" src="img/joachim-prinzbach.jpeg">
-                    <h3>Joachim Prinzbach</h3>
-                    <h3><a href="">Software Engineer @ Baloise</a></h3>
-                    <h3><img width="40" style="vertical-align: middle;" src="./img/Twitter_Logo_Blue.png"><a href="https://twitter.com/johaaachim">@johaaachim</a></h3>
-                </div>
-            </div>
-        </section>
         <section>
             <section data-background="img/baloise-park.jpg">
                 <h2><span class="image-heading">About Baloise</span></h2>
@@ -71,7 +54,7 @@
                 <ul>
                     <li><span class="warn">n</span>ode <span class="warn">p</span>ackage <span class="warn">m</span>anager</li>
                     <li>a part of node.js (also installed together with the installer)</li>
-                    <li>comparable with maven for Java</li>
+                    <li>comparable with maven/gradle for Java</li>
                 </ul>
             </section>
             <section>
@@ -87,7 +70,7 @@
                 <pre>
                     <code class="hljs json" data-trim contenteditable>
                         {
-                          "name": "alk-cicd-javascript",
+                          "name": "talk-cicd-javascript",
                           "version": "0.1.0",
                           "description": "talk about CICD with JS",
                           "scripts": {
@@ -105,7 +88,7 @@
         </section>
         <section>
             <section data-background="img/bill-fairs-801869-unsplash.jpg">
-                <h2><span class="image-heading">Our Continuous delivery</span></h2>
+                <h2><span class="image-heading">Baloise Continuous delivery</span></h2>
                 <h2><span class="image-heading">workflows for Java</span></h2>
             </section>
             <section data-background="#FFFFFF">
@@ -126,37 +109,37 @@
             <section data-background="img/semver.png" data-background-size="100%">
             </section>
             <section data-background="#E5F3F9">
-                <h3>Our approach in Java</h3>
+                <h3>Baloise approach in Java</h3>
                 <ul>
-                    <li class="fragment">not exactly semantic versioning ;-)</li>
-                    <li class="fragment">SNAPSHOTS!</li>
-                    <li class="fragment">not tagged</li>
-                    <li class="fragment">not stable</li>
-                    <li class="fragment">not reproducible</li>
-                    <li class="fragment">easy for development</li>
-                    <li class="fragment">built and published after every push on ci</li>
+                    <li>not exactly semantic versioning ;-)</li>
+                    <li>SNAPSHOTS!</li>
+                    <li>not tagged</li>
+                    <li>not stable</li>
+                    <li>not reproducible</li>
+                    <li>easy for development</li>
+                    <li>built and published after every push on ci</li>
                 </ul>
             </section>
             <section data-background="#E5F3F9">
                 <h3>Different versioning concepts in JavaScript</h3>
                 <ul>
-                    <li class="fragment">alpha / beta prereleases</li>
-                    <li class="fragment">semver as best practice</li>
-                    <li class="fragment">prereleases are tagged and reproducible</li>
-                    <li class="fragment">prereleases with npm-dist-tag <span class="code">next</span></li>
-                    <li class="fragment">releases with npm-dist-tag <span class="code">latest</span></li>
-                    <li class="fragment">only build and published locally and manually</li>
+                    <li>alpha / beta prereleases</li>
+                    <li>semver as best practice</li>
+                    <li>prereleases are tagged and reproducible</li>
+                    <li>prereleases with npm-dist-tag <span class="code">next</span></li>
+                    <li>releases with npm-dist-tag <span class="code">latest</span></li>
+                    <li>only build and published locally and manually</li>
                 </ul>
             </section>
             <section data-background="#E5F3F9">
                 <h3>Our solution</h3>
                 <h4>some picks from two worlds</h4>
                 <ul>
-                    <li class="fragment">build and release happens on ci</li>
-                    <li class="fragment">prereleases built and published on push</li>
-                    <li class="fragment">semver to communicate changes on release</li>
-                    <li class="fragment">immutable artifacts</li>
-                    <li class="fragment">developer uses ci job to release major / minor / patch</li>
+                    <li>build and release happens on ci</li>
+                    <li>prereleases built and published on push</li>
+                    <li>semver to communicate changes on release</li>
+                    <li>immutable artifacts</li>
+                    <li>developer uses ci job to release major / minor / patch</li>
                 </ul>
             </section>
             <section data-background="#E5F3F9">
@@ -172,29 +155,29 @@
                 <h2><span class="image-heading">and publishing</span></h2>
             </section>
             <section>
-                <h3>Our approach in Java</h3>
+                <h3>Baloise approach in Java</h3>
                 <ul>
-                    <li class="fragment">Release happens on ci</li>
-                    <li class="fragment">build and publish to artifact repository</li>
-                    <li class="fragment">artifact tagged in git -> immutable</li>
+                    <li>Release happens on ci</li>
+                    <li>build and publish to artifact repository</li>
+                    <li>artifact tagged in git -> immutable</li>
                 </ul>
             </section>
             <section>
                 <h3>Releasing in most JavaScript projects</h3>
                 <ul>
-                    <li class="fragment">releasing and tagging manually and locally by a developer</li>
-                    <li class="fragment">npm-dist-tag: -> latest</li>
-                    <li class="fragment">published on npmjs.org</li>
+                    <li>releasing and tagging manually and locally by a developer</li>
+                    <li>npm-dist-tag: -> latest</li>
+                    <li>published on npmjs.org</li>
                 </ul>
             </section>
             <section>
                 <h3>Our solution</h3>
                 <ul>
-                    <li class="fragment">git tag on every release by ci</li>
-                    <li class="fragment">npm-dist-tag: -> latest</li>
-                    <li class="fragment">ci publishes to artifact repository</li>
+                    <li>git tag on every release by ci</li>
+                    <li>npm-dist-tag: -> latest</li>
+                    <li>ci publishes to artifact repository</li>
 
-                    <pre class="fragment">
+                    <pre>
                         <code class="hljs bash" data-trim contenteditable>
                            $ npm info @cicd/demo
                         </code>
@@ -234,52 +217,52 @@
                 </pre>
             </section>
             <section>
-                <h3>Our approach in Java</h3>
+                <h3>Baloise approach in Java</h3>
                 <ul>
-                    <li class="fragment">build jobs defined in project groovy files, under version control</li>
-                    <li class="fragment">maven installed on CI (currently)</li>
-                    <li class="fragment">alternative: usage of gradle wrapper</li>
-                    <li class="fragment">maven or gradle as dependency manager</li>
+                    <li>build jobs defined in project groovy files, under version control</li>
+                    <li>maven installed on CI (currently)</li>
+                    <li>alternative: usage of gradle wrapper</li>
+                    <li>maven or gradle as dependency manager</li>
                 </ul>
             </section>
             <section>
                 <h3>Most javascript projects</h3>
                 <ul>
-                    <li class="fragment">define which Node.js version you need</li>
-                    <li class="fragment">container with installed version provided on ci</li>
-                    <li class="fragment">use <span class="code">package.json</span> to define dependencies</li>
+                    <li>define which Node.js version you need</li>
+                    <li>container with installed version provided on ci</li>
+                    <li>use <span class="code">package.json</span> to define dependencies</li>
                 </ul>
             </section>
             <section>
                 <h3>a big corporate enterprise</h3>
                 <h4>security, corporate proxy and governance</h4>
                 <ul>
-                    <li class="fragment">not able to download any executables</li>
-                    <li class="fragment">or NodeJS</li>
-                    <li class="fragment">or archives</li>
-                    <li class="fragment">or npm packages</li>
-                    <li class="fragment">also: must ensure an immutable history of released artifacts</li>
+                    <li>not able to download any executables</li>
+                    <li>or NodeJS</li>
+                    <li>or archives</li>
+                    <li>or npm packages</li>
+                    <li>also: must ensure an immutable history of released artifacts</li>
                 </ul>
             </section>
             <section>
                 <h3>Artifact repository to the rescue!</h3>
                 <ul>
-                    <li class="fragment">can download binaries and executables</li>
-                    <li class="fragment">works perfectly as download manager ;-)</li>
-                    <li class="fragment">has our own published packages</li>
-                    <li class="fragment">works as proxy to the outside world -> <a href="npmjs.org">npmjs.org</a></li>
+                    <li>can download binaries and executables</li>
+                    <li>works perfectly as download manager ;-)</li>
+                    <li>has our own published packages</li>
+                    <li>works as proxy to the outside world -> <a href="npmjs.org">npmjs.org</a></li>
                 </ul>
             </section>
             <section>
                 <h3>Our solution</h3>
                 <h4>No NodeJS installed on CI server</h4>
                 <ul>
-                    <li class="fragment">a project defines its required NodeJS version</li>
-                    <li class="fragment">that exact NodeJS version will be downloaded with maven</li>
-                    <li class="fragment">gradle or maven can be used to define and download</li>
-                    <li class="fragment"><span class="code">package.json</span> used to define all dependencies</li>
-                    <li class="fragment">npm packages are also downloaded through artifact repository</li>
-                    <li class="fragment">download our JavaScript <span class="code">publish library </span>with npm</li>
+                    <li>a project defines its required NodeJS version</li>
+                    <li>that exact NodeJS version will be downloaded with maven</li>
+                    <li>gradle or maven can be used to define and download</li>
+                    <li><span class="code">package.json</span> used to define all dependencies</li>
+                    <li>npm packages are also downloaded through artifact repository</li>
+                    <li>download our JavaScript <span class="code">publish library </span>with npm</li>
                 </ul>
             </section>
             <section>
@@ -317,7 +300,7 @@
                 <h3>Corporate Standard api built on best practices - freedom to adjust</h3>
             </section>
             <section>
-                <h3>Our approach in Java</h3>
+                <h3>Baloise approach in Java</h3>
                 <ul>
                     <li>corporate wide maven api and workflow on CI</li>
                     <li>fully customizable for teams</li>
@@ -385,20 +368,7 @@
             </section>
         </section>
 
-        <section>
-            <section data-background="img/challange.jpg">
-                <h2><span class="image-heading">Challenges</span></h2>
-            </section>
-            <section data-background="img/alvaro-reyes-700677-unsplash.jpg">
-                <h2><span class="image-heading">Third party software</span></h2>
-            </section>
-            <section data-background="img/thor-alvis-747416-unsplash.jpg">
-                <h2><span class="image-heading">Dev & Ops gardens</span></h2>
-            </section>
-            <section data-background="img/mindchange.jpg">
-                <h2><span class="image-heading">DevOps mindchange</span></h2>
-            </section>
-        </section>
+
         <section>
             <section data-background="img/paul-schafer-787418-unsplash.jpg">
                 <h2><span class="image-heading">Learnings</span></h2>
