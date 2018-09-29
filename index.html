@@ -106,50 +106,47 @@
         <section class="deck-slide" data-background="#E5F3F9">
             <h2>Continuous delivery concepts</h2>
         </section>
-        <section data-background="#44A0DD">
-            <section data-background="img/semver.png" data-background-size="100%">
+        <section>
+            <section data-background="img/daniele-fantin-770283-unsplash.jpg" data-background-size="100%">
+                <h2><span class="image-heading">#1 Versioning</span></h2>
+            </section>
+            <section data-background="#44A0DD">
+                <h3 style="color: white;">Semantic Versioning</h3>
+                <img style="width: 90%" src="img/semver.png" alt="">
             </section>
             <section data-background="#E5F3F9">
                 <h3>Baloise approach in Java</h3>
                 <ul>
                     <li>semver as best practice</li>
-                    <li>SNAPSHOTS built and published after every push on ci</li>
+                    <li>SNAPSHOT version built and published on push by ci</li>
                 </ul>
-
-
-                    <pre>
-                        <code class="hljs xml" data-trim contenteditable>
-                           &lt;dependency>
-                                &lt;groupId>junit&lt;/groupId>
-                                &lt;artifactId>junit&lt;/artifactId>
-                                &lt;version>4.12&lt;/version>
-                                &lt;scope>test&lt;/scope>
-                            &lt;/dependency>
-                        </code>
-                    </pre>
-
-
+                <pre>
+                    <code class="hljs xml" data-trim contenteditable>
+                       &lt;dependency>
+                            &lt;groupId>junit&lt;/groupId>
+                            &lt;artifactId>junit&lt;/artifactId>
+                            &lt;version>4.12&lt;/version>
+                            &lt;scope>test&lt;/scope>
+                        &lt;/dependency>
+                    </code>
+                </pre>
             </section>
             <section data-background="#E5F3F9">
                 <h3>Different versioning concepts in JavaScript</h3>
                 <ul>
-                    <li>alpha / beta prereleases</li>
                     <li>semver as best practice</li>
-                    <li>prereleases are tagged and reproducible</li>
-                    <li>prereleases with npm-dist-tag <span class="code">next</span></li>
-                    <li>releases with npm-dist-tag <span class="code">latest</span></li>
-                    <li>only build and published locally and manually</li>
+                    <li>alpha / beta prereleases</li>
+                    <li>version created manually</li>
                 </ul>
             </section>
             <section data-background="#E5F3F9">
                 <h3>Our solution</h3>
                 <h4>some picks from two worlds</h4>
                 <ul>
-                    <li>build and release happens on ci</li>
-                    <li>prereleases built and published on push</li>
+                    <li>version creation happens on ci</li>
+                    <li>prereleases built and published on push by ci</li>
                     <li>semver to communicate changes on release</li>
-                    <li>immutable artifacts</li>
-                    <li>developer uses ci job to release major / minor / patch</li>
+                    <li>developer uses ci job to select major / minor / patch</li>
                 </ul>
             </section>
             <section data-background="#E5F3F9">
@@ -176,7 +173,9 @@
                 <h3>Releasing in most JavaScript projects</h3>
                 <ul>
                     <li>releasing and tagging manually and locally by a developer</li>
-                    <li>npm-dist-tag: -> latest</li>
+                    <li>prereleases are tagged and reproducible</li>
+                    <li>prereleases with npm-dist-tag <span class="code">next</span></li>
+                    <li>releases with npm-dist-tag <span class="code">latest</span></li>
                     <li>published on npmjs.org</li>
                 </ul>
             </section>
