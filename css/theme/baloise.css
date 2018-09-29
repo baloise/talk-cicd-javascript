@@ -131,12 +131,12 @@ figure figcaption {
       right: 2px;
       height: 170px;
       width: 170px;
-      background-image: url("../../../img/baloise2.png"); }
+      background-image: url("../../img/baloise2.png"); }
     .reveal .deck-slide .logo.baselone {
       background-size: 80px;
       width: 80px;
       left: 2px;
-      background-image: url("../../../img/BaselOne18.png"); }
+      background-image: url("../../img/BaselOne18.png"); }
 
 .reveal .img-slide h2 {
   display: inline-block;
