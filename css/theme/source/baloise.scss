@@ -14,6 +14,7 @@
   url("../font/MetaPro-Normal.woff") format("woff"),
   url("../font/MetaPro-Normal.ttf") format("truetype")
 }
+
 $bal_brand_blue: #003399;
 $bal_rollover_blue: #002b82;
 $bal_link-cta_blue: #009ee7;
@@ -92,7 +93,7 @@ figure figcaption {
       background: rgba(0, 0, 0, 0.7);
       padding: 10px;
       font-size: 1.5em;
-      color: $bal_bg_white!important;
+      color: $bal_bg_white !important;
     }
   }
 
@@ -163,68 +164,79 @@ figure figcaption {
   }
 
   .deck-slide {
-    text-align: left;
-    background-size: 200px auto;
-
-    h1, h3 {
-      letter-spacing: 0;
-    }
+    text-align: center;
 
     h1 {
-      font-size: 1.9em;
+      font-size: 1.4em;
       position: relative;
-      margin-top: 4em;
 
-      &:before {
-        position: absolute;
-        content: '';
-        width: 180px;
-        height: 130px;
-        background-repeat: no-repeat;
-        background-size: 180px auto;
-        background-position: center;
-        top: -1.4em;
-        left: -1.2em;
+      span.image-heading {
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        color: $bal_bg_white !important;
       }
     }
 
-    h2.subheader {
-      color: $bal_notification_orange;
+    .deck-footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      background-color: yellow;
+      width: 100%;
     }
 
-    h3 {
-      margin-top: 0.5em;
-      font-size: 1.1em;
-      text-indent: 0.1em;
-      // text-transform: uppercase;
-      line-height: 1.3em;
-    }
-  }
-
-  .about {
-    display: inline-block;
-    width: 450px;
-
-    img.profile {
-      width: 250px;
-      max-width: none;
-      max-height: none;
-      border-radius: 50%;
-      margin: 0;
-      margin-bottom: 1em;
-    }
-
-    h3 {
-      font-size: 1em;
-    }
-
-    a {
+    h2 {
       font-size: 0.8em;
+      margin-top: 75px;
+      span.sub-header {
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        font-size: 1.1em;
+        color: $bal_bg_white !important;
+      }
     }
 
-    &:first-child {
-      margin-left: 0;
+    h5 {
+      span.header {
+        position: fixed;
+        display: block;
+        top: 8px;
+        font-size: 0.6em;
+        right: 8px;
+        z-index: 31;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.7);
+        padding: 6px;
+        color: $bal_bg_white !important;
+      }
     }
+
+    .logo {
+      position: fixed;
+      display: block;
+      z-index: 31;
+      height: 80px;
+      background-position: 0% 100%;
+      bottom: 8px;
+      background-repeat: no-repeat;
+      &.baloise {
+        background-size: 170px;
+        right: 2px;
+        height: 170px;
+        width: 170px;
+        background-image: url('../../../img/baloise2.png');
+      }
+      &.baselone {
+        background-size: 80px;
+        width: 80px;
+        left: 2px;
+        background-image: url('../../../img/BaselOne18.png');
+
+      }
+    }
+
   }
 
   .img-slide {
