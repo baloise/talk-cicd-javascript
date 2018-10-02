@@ -9,10 +9,10 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600);
 
 @font-face {
-  font-family: "MetaPro";
-  src: url("font/MetaPro-Normal.eot?") format("eot"),
-  url("../font/MetaPro-Normal.woff") format("woff"),
-  url("../font/MetaPro-Normal.ttf") format("truetype")
+	font-family: "MetaPro";
+	src: url("font/MetaPro-Normal.eot?") format("eot"),
+	url("../font/MetaPro-Normal.woff") format("woff"),
+	url("../font/MetaPro-Normal.ttf") format("truetype")
 }
 
 $bal_brand_blue: #003399;
@@ -53,262 +53,296 @@ $linkColorHover: lighten($linkColor, 20%);
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 img {
-  border: none !important;
-  box-shadow: none !important;
+	border: none !important;
+	box-shadow: none !important;
 }
 
 figure img {
-  margin-bottom: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 figure figcaption {
-  font-size: 0.5em !important;
-  margin-top: -10px !important;
+	font-size: 0.5em !important;
+	margin-top: -10px !important;
 }
 
 .window-background .present {
-  background-position-y: 0.5em;
+	background-position-y: 0.5em;
 }
 
 .reveal {
 
-  .slides > section {
-    padding: 0;
-  }
+	.about {
+		display: inline-block;
+		width: 450px;
+		background: rgb(0, 0, 0);
+		background: rgba(0, 0, 0, 0.7);
+		margin-top: 40px;
 
-  h1, h2 {
-    font-weight: 800 !important;
-  }
+		h3 {
+			margin: 0 !important;
+			color: $bal_bg_white !important;
+			img {
+				margin: 0;
+			}
+		}
 
-  h2 {
-    margin-bottom: 0.8em !important;
-    line-height: 1em !important;
+		a {
+			font-size: 0.8em;
+		}
 
-    code {
-      font-weight: normal;
-      background: transparent;
-    }
-    span.image-heading {
-      background: rgb(0, 0, 0);
-      background: rgba(0, 0, 0, 0.7);
-      padding: 10px;
-      font-size: 1.5em;
-      color: $bal_bg_white !important;
-    }
-  }
+		&:first-child {
+			margin-left: 0;
+		}
+	}
 
-  section {
-    img {
-      background: none !important;
-    }
-  }
+	.slides > section {
+		padding: 0;
+	}
 
-  p {
-    line-height: 1.4em;
-    margin-bottom: 1em;
-  }
+	h1, h2 {
+		font-weight: 800 !important;
+	}
 
-  ul, ol {
-    margin-top: 0.5em !important;
-    margin-bottom: 1em;
-  }
+	h2 {
+		margin-bottom: 0.8em !important;
+		line-height: 1em !important;
 
-  li {
-    margin-top: 0.8em;
+		code {
+			font-weight: normal;
+			background: transparent;
+		}
+		span.image-heading {
+			background: rgb(0, 0, 0);
+			background: rgba(0, 0, 0, 0.7);
+			padding: 10px;
+			font-size: 1.5em;
+			color: $bal_bg_white !important;
+		}
+	}
 
-    &:first-child {
-      margin-top: 0;
-    }
-  }
+	section {
+		img {
+			background: none !important;
+		}
+	}
 
-  pre {
-    box-shadow: none !important;
-    font-size: 0.7em !important;
-    word-wrap: normal !important;
-    code {
-      padding: 0.4em !important;
-      max-height: none !important;
-    }
+	p {
+		line-height: 1.4em;
+		margin-bottom: 1em;
+	}
 
-    .keyword {
-      color: $bal_notification_orange;
-    }
+	ul, ol {
+		margin-top: 0.5em !important;
+		margin-bottom: 1em;
+	}
 
-    .tag, .literal,
-    .apache .tag {
-      color: #3B7586;
-    }
+	li {
+		margin-top: 0.8em;
 
-    .variable {
-      color: #666;
-    }
+		&:first-child {
+			margin-top: 0;
+		}
+	}
 
-    .string {
-      color: #B66666;
-    }
-    .title {
-      color: #3B7586;
-    }
-  }
+	pre {
+		box-shadow: none !important;
+		font-size: 0.7em !important;
+		word-wrap: normal !important;
+		code {
+			padding: 0.4em !important;
+			max-height: none !important;
+		}
 
-  .bv-slide {
-    img {
-      opacity: 0.4;
+		.keyword {
+			color: $bal_notification_orange;
+		}
 
-      &:first-child {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-  }
+		.tag, .literal,
+		.apache .tag {
+			color: #3B7586;
+		}
 
-  .deck-slide {
-    text-align: center;
+		.variable {
+			color: #666;
+		}
 
-    h1 {
-      font-size: 1.4em;
-      position: relative;
+		.string {
+			color: #B66666;
+		}
+		.title {
+			color: #3B7586;
+		}
+	}
 
-      span.image-heading {
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.7);
-        padding: 10px;
-        color: $bal_bg_white !important;
-      }
-    }
+	.bv-slide {
+		img {
+			opacity: 0.4;
 
-    .deck-footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      background-color: yellow;
-      width: 100%;
-    }
+			&:first-child {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
 
-    h2 {
-      font-size: 0.8em;
-      margin-top: 75px;
-      span.sub-header {
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.7);
-        padding: 10px;
-        font-size: 1.1em;
-        color: $bal_bg_white !important;
-      }
-    }
+	.deck-slide {
+		text-align: center;
 
-    h5 {
-      span.header {
-        position: fixed;
-        display: block;
-        top: 8px;
-        font-size: 0.6em;
-        right: 8px;
-        z-index: 31;
-        background: rgb(0, 0, 0);
-        background: rgba(0, 0, 0, 0.7);
-        padding: 6px;
-        color: $bal_bg_white !important;
-      }
-    }
+		h1 {
+			font-size: 1.4em;
+			position: relative;
+			margin-top: 30px;
 
-    .logo {
-      position: fixed;
-      display: block;
-      z-index: 31;
-      height: 80px;
-      background-position: 0% 100%;
-      bottom: 8px;
-      background-repeat: no-repeat;
-      &.baloise {
-        background-size: 170px;
-        right: 2px;
-        height: 170px;
-        width: 170px;
-        background-image: url('/img/baloise2.png'), url('/talk-cicd-javascript/img/baloise2.png');
-      }
-      &.baselone {
-        background-size: 80px;
-        width: 80px;
-        left: 2px;
-        background-image: url('/img/BaselOne18.png'), url('/talk-cicd-javascript/img/BaselOne18.png');
+			span.image-heading {
+				background: rgb(0, 0, 0);
+				background: rgba(0, 0, 0, 0.7);
+				padding: 10px;
+				color: $bal_bg_white !important;
+			}
+			span.questions {
+				font-size: 1.8em;
+			}
+		}
 
-      }
-    }
+		.deck-footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			background-color: yellow;
+			width: 100%;
+		}
 
-  }
+		h2 {
+			font-size: 0.7em;
+			margin-top: 75px;
+			&.major {
+				margin-top: 120px;
+			}
+			&.minor {
+				margin-top: 50px;
+			}
+			span.sub-header {
+				background: rgb(0, 0, 0);
+				background: rgba(0, 0, 0, 0.7);
+				padding: 10px;
+				font-size: 1.1em;
+				color: $bal_bg_white !important;
+			}
+		}
 
-  .img-slide {
-    h2 {
-      display: inline-block;
-      margin-top: 5em;
-      margin-left: -4em;
-      background: rgba(255, 255, 255, 0.5);
-      padding: 0.5em;
-    }
-  }
+		h5 {
+			span.header {
+				position: fixed;
+				display: block;
+				top: 8px;
+				font-size: 0.6em;
+				right: 8px;
+				z-index: 31;
+				background: rgb(0, 0, 0);
+				background: rgba(0, 0, 0, 0.7);
+				padding: 6px;
+				color: $bal_bg_white !important;
+			}
+		}
 
-  .progress {
-    height: 0.25em;
-  }
+		.logo {
+			position: fixed;
+			display: block;
+			z-index: 31;
+			height: 80px;
+			background-position: 0% 100%;
+			bottom: 8px;
+			background-repeat: no-repeat;
+			&.baloise {
+				background-size: 170px;
+				right: 2px;
+				height: 170px;
+				width: 170px;
+				background-image: url('/img/baloise2.png'), url('/talk-cicd-javascript/img/baloise2.png');
+			}
+			&.baselone {
+				background-size: 80px;
+				width: 80px;
+				left: 2px;
+				background-image: url('/img/BaselOne18.png'), url('/talk-cicd-javascript/img/BaselOne18.png');
 
-  .warn {
-    color: $bal_error_red;
-  }
-  .code {
-    background: rgba(236, 239, 241, 0.56);
-    border-radius: 2px;
-    color: #00796B !important;
-    padding: 0 4px;
-    font-size: 90%;
-  }
+			}
+		}
+
+	}
+
+	.img-slide {
+		h2 {
+			display: inline-block;
+			margin-top: 5em;
+			margin-left: -4em;
+			background: rgba(255, 255, 255, 0.5);
+			padding: 0.5em;
+		}
+	}
+
+	.progress {
+		height: 0.25em;
+	}
+
+	.warn {
+		color: $bal_error_red;
+	}
+	.code {
+		background: rgba(236, 239, 241, 0.56);
+		border-radius: 2px;
+		color: #00796B !important;
+		padding: 0 4px;
+		font-size: 90%;
+	}
 }
 
 .print-pdf {
 
-  .sub-section-slide {
-    h2 {
-      opacity: 1;
-    }
-  }
+	.sub-section-slide {
+		h2 {
+			opacity: 1;
+		}
+	}
 
-  .reveal.none .slides section {
-    // padding-top: 300px!important;
+	.reveal.none .slides section {
+		// padding-top: 300px!important;
 
-    &.sub-section-slide {
-      padding-top: 350px !important;
-    }
+		&.sub-section-slide {
+			padding-top: 350px !important;
+		}
 
-    &.deck-slide {
-      padding-top: 0 !important;
-    }
-  }
+		&.deck-slide {
+			padding-top: 0 !important;
+		}
+	}
 }
 
 table tbody {
-  th {
-    background: rgba(236, 239, 241, 0.24);
-    border-right: 1px solid #ECEFF1;
-    font-weight: 400;
-    border-bottom: 1px solid #ECEFF1;
-    padding: 16px 32px;
-    text-align: left;
-  }
-  td {
-    border-bottom: 1px solid #ECEFF1;
-    padding: 16px 32px;
-    text-align: left;
-  }
+	th {
+		background: rgba(236, 239, 241, 0.24);
+		border-right: 1px solid #ECEFF1;
+		font-weight: 400;
+		border-bottom: 1px solid #ECEFF1;
+		padding: 16px 32px;
+		text-align: left;
+	}
+	td {
+		border-bottom: 1px solid #ECEFF1;
+		padding: 16px 32px;
+		text-align: left;
+	}
 }
 
 .tab {
-  display: none;
-  margin-top: -0.35em !important;
+	display: none;
+	margin-top: -0.35em !important;
 
-  &.active {
-    display: block;
-  }
+	&.active {
+		display: block;
+	}
 }
 
 // Theme template ------------------------------

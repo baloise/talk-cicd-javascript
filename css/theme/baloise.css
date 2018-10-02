@@ -21,6 +21,22 @@ figure figcaption {
 .window-background .present {
   background-position-y: 0.5em; }
 
+.reveal .about {
+  display: inline-block;
+  width: 450px;
+  background: black;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 40px; }
+  .reveal .about h3 {
+    margin: 0 !important;
+    color: #ffffff !important; }
+    .reveal .about h3 img {
+      margin: 0; }
+  .reveal .about a {
+    font-size: 0.8em; }
+  .reveal .about:first-child {
+    margin-left: 0; }
+
 .reveal .slides > section {
   padding: 0; }
 
@@ -86,12 +102,15 @@ figure figcaption {
   text-align: center; }
   .reveal .deck-slide h1 {
     font-size: 1.4em;
-    position: relative; }
+    position: relative;
+    margin-top: 30px; }
     .reveal .deck-slide h1 span.image-heading {
       background: black;
       background: rgba(0, 0, 0, 0.7);
       padding: 10px;
       color: #ffffff !important; }
+    .reveal .deck-slide h1 span.questions {
+      font-size: 1.8em; }
   .reveal .deck-slide .deck-footer {
     position: fixed;
     left: 0;
@@ -99,8 +118,12 @@ figure figcaption {
     background-color: yellow;
     width: 100%; }
   .reveal .deck-slide h2 {
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin-top: 75px; }
+    .reveal .deck-slide h2.major {
+      margin-top: 120px; }
+    .reveal .deck-slide h2.minor {
+      margin-top: 50px; }
     .reveal .deck-slide h2 span.sub-header {
       background: black;
       background: rgba(0, 0, 0, 0.7);
