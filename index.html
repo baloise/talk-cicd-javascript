@@ -166,14 +166,15 @@
                 <ul>
                     <li>Release happens on ci</li>
                     <li>build and publish to artifact repository</li>
-                    <li>artifact tagged in git -> immutable</li>
+                    <li>release artifact tagged in git -> immutable</li>
+                    <li>SNAPSHOTS not reproducable, not tagged</li>
                 </ul>
             </section>
             <section>
                 <h3>Releasing in most JavaScript projects</h3>
                 <ul>
                     <li>releasing and tagging manually and locally by a developer</li>
-                    <li>prereleases are tagged and reproducible</li>
+                    <li>all releases tagged and reproducible</li>
                     <li>prereleases with npm-dist-tag <span class="code">next</span></li>
                     <li>releases with npm-dist-tag <span class="code">latest</span></li>
                     <li>published on npmjs.org</li>
@@ -184,6 +185,8 @@
                 <ul>
                     <li>git tag on every release by ci</li>
                     <li>npm-dist-tag: -> latest</li>
+                    <li>preleases not tagged</li>
+                    <li>npm-dist-tag: -> next</li>
                     <li>ci publishes to artifact repository</li>
 
                     <pre>
@@ -430,19 +433,14 @@
                 <div class="about">
                     <h3>Joachim Prinzbach</h3>
                     <h3><img width="40" style="vertical-align: middle;" src="./img/Twitter_Logo_Blue.png"><a href="https://twitter.com/johaaachim">@johaaachim</a></h3>
-                    <h3><img width="40" style="vertical-align: middle;" src="./img/GitHub-Mark-120px-plus.png"><a href="https://github.com/joachimprinzbach"> joachimprinzbach</a></h3>
+                    <h3><img width="40" style="vertical-align: middle;" src="./img/github_log_inverted.png"><a href="https://github.com/joachimprinzbach"> joachimprinzbach</a></h3>
                 </div>
                 <div class="about">
                     <h3>Joachim Schlienger</h3>
-                    <h3><img width="40" style="vertical-align: middle;;" src="./img/Twitter_Logo_Blue.png"><a href="https://twitter.com/JoachimSchlien1">@JoachimSchlien1</a></h3>
-                    <h3><img width="40" style="vertical-align: middle;;" src="./img/GitHub-Mark-120px-plus.png"><a href="https://github.com/schlijo"> schlijo</a></h3>
+                    <h3><img width="40" style="vertical-align: middle;" src="./img/Twitter_Logo_Blue.png"><a href="https://twitter.com/JoachimSchlien1">@JoachimSchlien1</a></h3>
+                    <h3><img width="40" style="vertical-align: middle;" src="img/github_log_inverted.png"><a href="https://github.com/schlijo"> schlijo</a></h3>
                 </div>
             </div>
-        </section>
-        <section class="deck-slide" data-background="#E5F3F9">
-            <h1>Any questions?</h1>
-            <h3>Find the slides: <a href="http://bit.ly/cicd-js">http://bit.ly/cicd-js</a></h3>
-            <h3>Images from Unsplash: <a href="http://bit.ly/cicd-js-images">http://bit.ly/cicd-js-images</a></h3>
         </section>
     </div>
 </div>

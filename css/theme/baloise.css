@@ -23,7 +23,8 @@ figure figcaption {
 
 .reveal .about {
   display: inline-block;
-  width: 450px;
+  width: 420px;
+  padding: 10px 0;
   background: black;
   background: rgba(0, 0, 0, 0.7);
   margin-top: 40px; }
