@@ -19,3 +19,5 @@
 - automate https://blog.siliconloons.com/automate-all-the-things.png
 - firewall https://www.caiservice.com/images/stories/services/wall.png
 - npm and node.js https://coolestguidesontheplanet.com/wp-content/uploads/2014/07/nodejs-npm.png
+- basel1.jpg https://www.premiumswitzerland.com/img/image_db/basel_luxury_hotels_main-1920.jpg
+- basel2.jpg: © Andreas Zimmermann / Basel Tourismus www.basel.com https://static1.bergfex.com/images/downsized/94/47792194de65ec94_e27f8e4663f9e28f@2x.jpg
