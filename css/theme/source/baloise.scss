@@ -258,16 +258,17 @@ figure figcaption {
 			background-repeat: no-repeat;
 			&.baloise {
 				background-size: 170px;
-				right: 2px;
-				height: 170px;
+				right: 8px;
+				height: 120px;
 				width: 170px;
 				background-image: url('/img/baloise_logo.png'), url('/talk-cicd-javascript/img/baloise_logo.png');
 			}
 			&.baselone {
-				background-size: 80px;
-				width: 80px;
-				left: 2px;
-				background-image: url('/img/BaselOne18.png'), url('/talk-cicd-javascript/img/BaselOne18.png');
+				background-size: 240px;
+				width: 240px;
+				height: 120px;
+				left: 8px;
+				background-image: url('/img/baselone.png'), url('/talk-cicd-javascript/img/baselone.png');
 
 			}
 		}
