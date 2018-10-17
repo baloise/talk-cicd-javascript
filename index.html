@@ -145,10 +145,9 @@
                 <pre>
                     <code class="hljs xml" data-trim contenteditable>
                        &lt;dependency>
-                            &lt;groupId>junit&lt;/groupId>
-                            &lt;artifactId>junit&lt;/artifactId>
-                            &lt;version>4.12&lt;/version>
-                            &lt;scope>test&lt;/scope>
+                            &lt;groupId>ch.basler.cicd&lt;/groupId>
+                            &lt;artifactId>demo-java&lt;/artifactId>
+                            &lt;version>0.1.3&lt;/version>
                         &lt;/dependency>
                     </code>
                 </pre>
@@ -214,7 +213,7 @@
                 <ul>
                     <li>git tag on every release by ci</li>
                     <li>npm-dist-tag: -> latest</li>
-                    <li>preleases not tagged</li>
+                    <li>prereleases not tagged</li>
                     <li>npm-dist-tag: -> next</li>
                     <li>ci publishes to artifact repository</li>
 
@@ -233,34 +232,6 @@
                 <h2><span class="image-heading">#3 Self contained builds</span></h2>
             </section>
 
-            <section data-background="#E5F3F9">
-                <h2>Self contained builds</h2>
-                <h5>CI job configuration in GIT, no buildtools installed on ci</h5>
-                <pre>
-                    <code class="hljs groovy" data-trim contenteditable>
-                        options {
-                            disableConcurrentBuilds()
-                        }
-                        parameters {
-                            choice(
-                                choices: 'Major\nMinor\nPatch',
-                                description: 'Which version?',
-                                name: 'version'
-                            )
-                        }
-                        stage('Example Build') {
-                            node() {
-                                checkout scm
-                                npmInit()
-                                npmRelease version: "${params.version}"
-                            }
-                        }
-
-
-                    </code>
-                </pre>
-            </section>
-
             <section>
                 <h3>Baloise approach in Java</h3>
                 <ul>
@@ -269,6 +240,24 @@
                     <li>alternative: usage of gradle wrapper</li>
                     <li>maven or gradle as dependency manager</li>
                 </ul>
+            </section>
+
+            <section data-background="#E5F3F9">
+                <h3>CI job config in GIT, no buildtools installed on ci</h3>
+                <pre>
+                    <code class="hljs groovy" data-trim contenteditable>
+                        options {
+                            disableConcurrentBuilds()
+                        }
+
+                        stage('Example Build') {
+                            node() {
+                                checkout scm
+                                mavenbuild()
+                            }
+                        }
+                    </code>
+                </pre>
             </section>
 
             <section>
@@ -313,6 +302,33 @@
                     <li>npm packages are also downloaded through artifact repository</li>
                     <li>download our JavaScript <span class="code">publish library </span>with npm</li>
                 </ul>
+            </section>
+
+            <section data-background="#E5F3F9">
+                <h3>CI job config in GIT, no buildtools installed on ci</h3>
+                <pre>
+                    <code class="hljs groovy" data-trim contenteditable>
+                        options {
+                            disableConcurrentBuilds()
+                        }
+                        parameters {
+                            choice(
+                                choices: 'Major\nMinor\nPatch',
+                                description: 'Which version?',
+                                name: 'version'
+                            )
+                        }
+                        stage('Example Build') {
+                            node() {
+                                checkout scm
+                                npmInit()
+                                npmRelease version: "${params.version}"
+                            }
+                        }
+
+
+                    </code>
+                </pre>
             </section>
 
             <section>
@@ -404,7 +420,7 @@
 
             <section>
                 <h3>Documented in jenkins</h3>
-                <img style="width: 90%" src="img/Pipeline Syntax_ Global Variable Reference.png"/>
+                <img style="width: 70%" src="img/Pipeline Syntax_ Global Variable Reference.png"/>
             </section>
         </section>
 
@@ -434,12 +450,13 @@
 
             <section>
                 <ul>
-                    <li>collect data from ci in a persistence store to feed a viewer</li>
-                    <li>artifacts are only retrieved from artifact repository (build once)</li>
-                    <li>learn from npm where snapshots are distinguishable -> branchname in version</li>
-                    <li>hide the differences between Java and JavaScript behind a facade</li>
-                    <li>stick to the common best practices of each ecosystem</li>
                     <li>use semver!</li>
+                    <li>everything is under version control</li>
+                    <li>retrieve artifacts from artifact repository (build once)</li>
+                    <li>learn from npm where snapshots are distinguishable -> branchname in version</li>
+                    <li>hide differences between Java and JS behind a facade</li>
+                    <li>stick to the common best practices of each ecosystem</li>
+                    <li>collect data from ci in a persistence store to feed a viewer</li>
                     <li>and... </li>
                 </ul>
             </section>

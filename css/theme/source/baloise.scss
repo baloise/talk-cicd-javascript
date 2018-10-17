@@ -74,7 +74,7 @@ figure figcaption {
 
 	.about {
 		display: inline-block;
-		width: 420px;
+		width: 320px;
 		padding: 10px 0;
 		background: rgb(0, 0, 0);
 		background: rgba(0, 0, 0, 0.7);
@@ -82,6 +82,7 @@ figure figcaption {
 
 		h3 {
 			margin: 0 !important;
+            font-size: 0.8em;
 			color: $bal_bg_white !important;
 			img {
 				margin: 0;

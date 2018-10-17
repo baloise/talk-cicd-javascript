@@ -23,13 +23,14 @@ figure figcaption {
 
 .reveal .about {
   display: inline-block;
-  width: 420px;
+  width: 320px;
   padding: 10px 0;
   background: black;
   background: rgba(0, 0, 0, 0.7);
   margin-top: 40px; }
   .reveal .about h3 {
     margin: 0 !important;
+    font-size: 0.8em;
     color: #ffffff !important; }
     .reveal .about h3 img {
       margin: 0; }
