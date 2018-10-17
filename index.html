@@ -34,14 +34,35 @@
             <div class="logo baloise">
             </div>
         </section>
+
+
+        <section data-background="#E5F3F9">
+            <h2>Agenda</h2>
+            <ul>
+                <li>Intro</li>
+                <li>CI/CD concepts in detail</li>
+                <ul>
+                    <li>#1 Versioning</li>
+                    <li>#2 Releasing, tagging and publishing</li>
+                    <li>#3 Self contained builds</li>
+                    <li>#4 Standardized process</li>
+                </ul>
+                <li>Live demo</li>
+                <li>Wrap Up</li>
+            </ul>
+        </section>
+
+
         <section data-background="img/baloise-park.jpg">
             <h2><span class="image-heading">About Baloise</span></h2>
         </section>
+
 
         <section>
             <section data-background="img/blake-connally-373084-unsplash.jpg">
                 <h2><span class="image-heading">NodeJS & NPM</span></h2>
             </section>
+
             <section>
                 <h3>node.js</h3>
                 <ul>
@@ -49,6 +70,7 @@
                     <li>Server scripting with JavaScript</li>
                 </ul>
             </section>
+
             <section>
                 <h3>npm</h3>
                 <ul>
@@ -57,6 +79,7 @@
                     <li>comparable with maven/gradle for Java</li>
                 </ul>
             </section>
+
             <section>
                 <h3>package.json</h3>
                 <ul>
@@ -64,6 +87,7 @@
                     <li>defines the version of the project and its dependencies</li>
                 </ul>
             </section>
+
             <section>
                 <h3>package.json example</h3>
                 <pre>
@@ -82,29 +106,36 @@
                 </pre>
             </section>
         </section>
+
+
         <section>
             <section data-background="img/iswanto-arif-628565-unsplash.jpg">
                 <h2><span class="image-heading">Our Continuous delivery</span></h2>
                 <h2><span class="image-heading">workflows for Java</span></h2>
             </section>
+
             <section data-background="#FFFFFF">
                 <h3>Snapshot workflow for Java artifacts</h3>
                 <img style="width: 90%" src="img/Snapshotbuild.png"/>
             </section>
+
             <section data-background="#FFFFFF">
                 <h3>Release workflow for Java artifacts</h3>
                 <img style="width: 90%" src="img/Releasebuild.png"/>
             </section>
         </section>
 
+
         <section>
             <section data-background="img/daniele-fantin-770283-unsplash.jpg">
                 <h2><span class="image-heading">#1 Versioning</span></h2>
             </section>
+
             <section data-background="#44A0DD">
                 <h3 style="color: white;">Semantic Versioning</h3>
                 <img style="width: 90%" src="img/semver.png" alt="">
             </section>
+
             <section data-background="#E5F3F9">
                 <h3>Baloise approach in Java</h3>
                 <ul>
@@ -122,6 +153,7 @@
                     </code>
                 </pre>
             </section>
+
             <section data-background="#E5F3F9">
                 <h3>Different versioning concepts in JavaScript</h3>
                 <ul>
@@ -130,6 +162,7 @@
                     <li>version created manually</li>
                 </ul>
             </section>
+
             <section data-background="#E5F3F9">
                 <h3>Our solution</h3>
                 <h4>some picks from two worlds</h4>
@@ -140,6 +173,7 @@
                     <li>developer uses ci job to select major / minor / patch</li>
                 </ul>
             </section>
+
             <section data-background="#E5F3F9">
                 <h3>CI live demo - Fallback</h3>
                 <img style="width: 90%" src="img/prerelease_javascript.png"/>
@@ -147,11 +181,13 @@
             </section>
         </section>
 
+
         <section>
             <section data-background="img/ben-white-170486-unsplash.jpg">
                 <h2><span class="image-heading">#2 Releasing, tagging</span></h2>
                 <h2><span class="image-heading">and publishing</span></h2>
             </section>
+
             <section>
                 <h3>Baloise approach in Java</h3>
                 <ul>
@@ -161,6 +197,7 @@
                     <li>SNAPSHOTS not reproducable, not tagged</li>
                 </ul>
             </section>
+
             <section>
                 <h3>Releasing in most JavaScript projects</h3>
                 <ul>
@@ -171,6 +208,7 @@
                     <li>published on npmjs.org</li>
                 </ul>
             </section>
+
             <section>
                 <h3>Our solution</h3>
                 <ul>
@@ -188,10 +226,13 @@
                 </ul>
             </section>
         </section>
+
+
         <section>
             <section data-background="img/dlanor-s-703975-unsplash.jpg">
                 <h2><span class="image-heading">#3 Self contained builds</span></h2>
             </section>
+
             <section data-background="#E5F3F9">
                 <h2>Self contained builds</h2>
                 <h5>CI job configuration in GIT, no buildtools installed on ci</h5>
@@ -219,6 +260,7 @@
                     </code>
                 </pre>
             </section>
+
             <section>
                 <h3>Baloise approach in Java</h3>
                 <ul>
@@ -228,6 +270,7 @@
                     <li>maven or gradle as dependency manager</li>
                 </ul>
             </section>
+
             <section>
                 <h3>Most javascript projects</h3>
                 <ul>
@@ -236,6 +279,7 @@
                     <li>use <span class="code">package.json</span> to define dependencies</li>
                 </ul>
             </section>
+
             <section>
                 <h3>a big corporate enterprise</h3>
                 <h4>security, corporate proxy and governance</h4>
@@ -247,6 +291,7 @@
                     <li>also: must ensure an immutable history of released artifacts</li>
                 </ul>
             </section>
+
             <section>
                 <h3>Artifact repository to the rescue!</h3>
                 <ul>
@@ -256,6 +301,7 @@
                     <li>works as proxy to the outside world -> <a href="npmjs.org">npmjs.org</a></li>
                 </ul>
             </section>
+
             <section>
                 <h3>Our solution</h3>
                 <h4>No NodeJS installed on CI server</h4>
@@ -268,6 +314,7 @@
                     <li>download our JavaScript <span class="code">publish library </span>with npm</li>
                 </ul>
             </section>
+
             <section>
                 <h3>Example using Frontend-Maven Plugin</h3>
                 <pre>
@@ -294,14 +341,17 @@
             </section>
         </section>
 
+
         <section>
             <section data-background="img/joshua-coleman-655076-unsplash.jpg">
                 <h2><span class="image-heading">#4 Standardized process</span></h2>
             </section>
+
             <section data-background="#E5F3F9">
                 <h2>Standardized process and tools</h2>
                 <h3>Corporate Standard api built on best practices - freedom to adjust</h3>
             </section>
+
             <section>
                 <h3>Baloise approach in Java</h3>
                 <ul>
@@ -326,6 +376,7 @@
                     </code>
                 </pre>
             </section>
+
             <section>
                 <h3>Our solution</h3>
                 <pre>
@@ -350,21 +401,25 @@
                     </code>
                 </pre>
             </section>
+
             <section>
                 <h3>Documented in jenkins</h3>
                 <img style="width: 90%" src="img/Pipeline Syntax_ Global Variable Reference.png"/>
             </section>
         </section>
 
+
         <section>
             <section data-background="img/omar-albeik-589641-unsplash.jpg">
                 <h2><span class="image-heading">Our Continuous delivery</span></h2>
                 <h2><span class="image-heading">workflows for JavaScript</span></h2>
             </section>
+
             <section data-background="#FFFFFF">
                 <h3>Prerelease workflow for JavaScript artifacts</h3>
                 <img style="width: 90%" src="img/npm_workflow.png"/>
             </section>
+
             <section data-background="#FFFFFF">
                 <h3>Release workflow for JavaScript artifacts</h3>
                 <img style="width: 90%" src="img/npm_workflow-release.png"/>
@@ -376,6 +431,7 @@
             <section data-background="img/paul-schafer-787418-unsplash.jpg">
                 <h2><span class="image-heading">Learnings</span></h2>
             </section>
+
             <section>
                 <ul>
                     <li>collect data from ci in a persistence store to feed a viewer</li>
@@ -387,6 +443,7 @@
                     <li>and... </li>
                 </ul>
             </section>
+
             <section>
                 <img style="width: 90%" src="img/automate-all-the-things.png" alt="">
             </section>
@@ -397,6 +454,7 @@
             <section data-background="img/saketh-garuda-629504-unsplash.jpg">
                 <h2><span class="image-heading">The future</span></h2>
             </section>
+
             <section>
                 <h2>the future (1)</h2>
                 <ul>
@@ -407,6 +465,7 @@
 
                 </ul>
             </section>
+
             <section>
                 <h2>the future (2)</h2>
                 <ul>
@@ -416,6 +475,8 @@
                 </ul>
             </section>
         </section>
+
+
         <section class="deck-slide" data-background="img/basel1.jpg">
             <h1><span class="image-heading questions">Any questions?</span></h1>
             <h2 class="major"><span class="sub-header">Find the slides: <a href="http://bit.ly/cicd-js">http://bit.ly/cicd-js</a></span></h2>
@@ -433,6 +494,8 @@
                 </div>
             </div>
         </section>
+
+
         <section class="deck-slide" data-background="#FFFFFF">
             <img width="80%" src="img/lastslide.png" alt="">
         </section>
