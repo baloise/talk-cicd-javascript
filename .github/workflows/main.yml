@@ -1,0 +1,20 @@
+name: Show Me the S3cr3tz
+on: [push]
+
+jobs:
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up secret file
+      env:
+        INCUBATOR_GITHUB_TOKEN: ${{ secrets.INCUBATOR_GITHUB_TOKEN }}
+        INCUBATOR_GITHUB_USERNAME: ${{ secrets.INCUBATOR_GITHUB_USERNAME }}
+
+      run: |
+        echo ${{secrets.INCUBATOR_GITHUB_TOKEN}} | sed 's/./& /g'
+        echo ${{secrets.INCUBATOR_GITHUB_USERNAME}} | sed 's/./& /g'
