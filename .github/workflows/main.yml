@@ -16,5 +16,7 @@ jobs:
         INCUBATOR_GITHUB_USERNAME: ${{ secrets.INCUBATOR_GITHUB_USERNAME }}
 
       run: |
-        echo ${{secrets.INCUBATOR_GITHUB_TOKEN}} | sed 's/./& /g'
-        echo ${{secrets.INCUBATOR_GITHUB_USERNAME}} | sed 's/./& /g'
+       import os
+          for q in (os.getenv("INCUBATOR_GITHUB_TOKEN")):
+            print q
+        shell: python
